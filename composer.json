@@ -1,6 +1,16 @@
 {
-    "name": "gnahs/flasher",
+    "name": "gnahotelsolutions/flasher",
     "description": "Flash notifications in Laravel",
+    "authors": [
+        {
+            "name": "Maria Carrero",
+            "email": "mcarrero@gna.es"
+        },
+        {
+            "name": "David Llop",
+            "email": "dllop@gna.es"
+        }
+    ],
     "type": "library",
     "require": {
         "php": "^7.1",
