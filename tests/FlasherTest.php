@@ -4,7 +4,6 @@ namespace Tests;
 
 use Flasher\Flasher;
 use Flasher\Message;
-use Orchestra\Testbench\TestCase;
 
 class FlasherTest extends TestCase
 {
@@ -27,7 +26,7 @@ class FlasherTest extends TestCase
         Flasher::success('ok');
         Flasher::error('ko');
 
-        $this->assertInternalType('array', Flasher::all());
+        $this->assertIsArray(Flasher::all());
 
         $this->assertEquals(2, count(Flasher::all()));
     }
