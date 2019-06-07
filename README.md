@@ -1,8 +1,8 @@
-# Html Menu Generator
+# Flasher
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gnahotelsolutions/flasher.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/flasher)
 [![Total Downloads](https://img.shields.io/packagist/dt/gnahotelsolutions/flasher.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/flasher)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 
 
 The `gnahotelsolutions/flasher` package provides an easy way to interact with flashed messages in your Laravel application.
@@ -60,7 +60,7 @@ Flasher::createNotification('store', 'Someone bought a product!', null);
 ```
 
 If you're using [Bootstrap](https://getbootstrap.com) in your project, you can use `getBootstrapClass()` method. 
-It will replace `error` by `danger` to match the framework's CSS class.
+It will replace `error` with `danger` to match the framework's CSS class.
 
 ## Testing
 
