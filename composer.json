@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Flasher\\": "src/"
+            "GNAHotelSolutions\\Flasher\\": "src/"
         }
     },
     "autoload-dev": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Flasher\\FlasherServiceProvider"
+                "GNAHotelSolutions\\Flasher\\FlasherServiceProvider"
             ]
         }
     },

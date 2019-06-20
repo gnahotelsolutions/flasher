@@ -1,6 +1,6 @@
 <?php
 
-namespace Flasher;
+namespace GNAHotelSolutions\Flasher;
 
 class Message
 {

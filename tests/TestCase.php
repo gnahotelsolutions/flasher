@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Flasher\FlasherServiceProvider;
+use GNAHotelSolutions\Flasher\FlasherServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

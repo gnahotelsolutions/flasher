@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use Flasher\Flasher;
-use Flasher\Message;
+use GNAHotelSolutions\Flasher\Flasher;
+use GNAHotelSolutions\Flasher\Message;
 
 class FlasherTest extends TestCase
 {
