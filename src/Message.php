@@ -4,7 +4,6 @@ namespace GNAHotelSolutions\Flasher;
 
 class Message
 {
-
     /** @var string */
     private $type;
 
@@ -32,13 +31,25 @@ class Message
         $this->duration = $duration;
     }
 
-    public function getType(): string  { return $this->type; }
+    public function getType(): string
+    {
+        return $this->type;
+    }
 
-    public function getMessage(): string { return $this->message; }
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
 
-    public function getDuration(): int { return $this->duration; }
+    public function getDuration(): int
+    {
+        return $this->duration;
+    }
 
-    public function getId(): string { return $this->id; }
+    public function getId(): string
+    {
+        return $this->id;
+    }
 
     /**
      * Transform the current notification type to Bootstrap classes.
