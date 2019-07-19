@@ -1,4 +1,5 @@
 <?php
+
 namespace GNAHotelSolutions\Flasher;
 
 use Illuminate\Support\ServiceProvider;

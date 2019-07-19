@@ -7,7 +7,6 @@ use GNAHotelSolutions\Flasher\Message;
 
 class FlasherTest extends TestCase
 {
-
     /** @test */
     public function can_find_notification_by_id()
     {

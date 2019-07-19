@@ -15,11 +15,10 @@ class Flasher
     public static function createNotification($type, $message, $duration)
     {
         $notification = new Message($type, $message, $duration);
-        session()->flash('notifications.' . $notification->getId(), $notification);
+        session()->flash('notifications.'.$notification->getId(), $notification);
 
         return $notification->getId();
     }
-
 
     /**
      * Creates a success notification.
@@ -111,5 +110,4 @@ class Flasher
     {
         return session()->has('notifications');
     }
-
 }
