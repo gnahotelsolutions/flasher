@@ -27,7 +27,7 @@ class FlasherTest extends TestCase
 
         $this->assertIsArray(Flasher::all());
 
-        $this->assertEquals(2, count(Flasher::all()));
+        $this->assertCount(2, Flasher::all());
     }
 
     /** @test */
@@ -37,7 +37,7 @@ class FlasherTest extends TestCase
 
         $this->assertInstanceOf(Message::class, Flasher::first());
 
-        $this->assertEquals('ok', Flasher::first()->getMessage());
+        $this->assertSame('ok', Flasher::first()->getMessage());
     }
 
     /** @test */
@@ -55,13 +55,13 @@ class FlasherTest extends TestCase
 
         $notification = Flasher::find($notificationId);
 
-        $this->assertEquals(1, count(session('notifications')));
+        $this->assertCount(1, session('notifications'));
 
         $this->assertInstanceOf(Message::class, $notification);
 
-        $this->assertEquals('user created', $notification->getMessage());
+        $this->assertSame('user created', $notification->getMessage());
 
-        $this->assertEquals('success', $notification->getType());
+        $this->assertSame('success', $notification->getType());
     }
 
     /** @test */
@@ -73,13 +73,13 @@ class FlasherTest extends TestCase
 
         $notification = Flasher::find($notificationId);
 
-        $this->assertEquals(1, count(session('notifications')));
+        $this->assertCount(1, session('notifications'));
 
         $this->assertInstanceOf(Message::class, $notification);
 
-        $this->assertEquals('forbidden access', $notification->getMessage());
+        $this->assertSame('forbidden access', $notification->getMessage());
 
-        $this->assertEquals('error', $notification->getType());
+        $this->assertSame('error', $notification->getType());
     }
 
     /** @test */
@@ -91,13 +91,13 @@ class FlasherTest extends TestCase
 
         $notification = Flasher::find($notificationId);
 
-        $this->assertEquals(1, count(session('notifications')));
+        $this->assertCount(1, session('notifications'));
 
         $this->assertInstanceOf(Message::class, $notification);
 
-        $this->assertEquals('you have a new email', $notification->getMessage());
+        $this->assertSame('you have a new email', $notification->getMessage());
 
-        $this->assertEquals('info', $notification->getType());
+        $this->assertSame('info', $notification->getType());
     }
 
     /** @test */
@@ -109,13 +109,13 @@ class FlasherTest extends TestCase
 
         $notification = Flasher::find($notificationId);
 
-        $this->assertEquals(1, count(session('notifications')));
+        $this->assertCount(1, session('notifications'));
 
         $this->assertInstanceOf(Message::class, $notification);
 
-        $this->assertEquals('your account will be closed in 2 days', $notification->getMessage());
+        $this->assertSame('your account will be closed in 2 days', $notification->getMessage());
 
-        $this->assertEquals('warning', $notification->getType());
+        $this->assertSame('warning', $notification->getType());
     }
 
     /** @test */
