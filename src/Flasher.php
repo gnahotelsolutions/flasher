@@ -7,9 +7,9 @@ class Flasher
     /**
      * Create a notification.
      *
-     * @param string $type
-     * @param string $message
-     * @param int $duration
+     * @param  string  $type
+     * @param  string  $message
+     * @param  int  $duration
      * @return string
      */
     public static function createNotification($type, $message, $duration)
@@ -23,8 +23,8 @@ class Flasher
     /**
      * Creates a success notification.
      *
-     * @param string $message
-     * @param int $duration
+     * @param  string  $message
+     * @param  int  $duration
      * @return string
      */
     public static function success($message, $duration = 5000)
@@ -35,8 +35,8 @@ class Flasher
     /**
      * Creates a warning notification.
      *
-     * @param string $message
-     * @param int $duration
+     * @param  string  $message
+     * @param  int  $duration
      * @return string
      */
     public static function warning($message, $duration = 5000)
@@ -47,8 +47,8 @@ class Flasher
     /**
      * Creates an info notification.
      *
-     * @param string $message
-     * @param int $duration
+     * @param  string  $message
+     * @param  int  $duration
      * @return string
      */
     public static function info($message, $duration = 5000)
@@ -59,8 +59,8 @@ class Flasher
     /**
      * Creates an error notification.
      *
-     * @param string $message
-     * @param int $duration
+     * @param  string  $message
+     * @param  int  $duration
      * @return string
      */
     public static function error($message, $duration = 5000)

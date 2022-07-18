@@ -19,9 +19,9 @@ class Message
     /**
      * Message constructor.
      *
-     * @param string $type
-     * @param string $message
-     * @param int $duration
+     * @param  string  $type
+     * @param  string  $message
+     * @param  int  $duration
      */
     public function __construct($type, $message, $duration)
     {
