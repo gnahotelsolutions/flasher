@@ -7,7 +7,10 @@ use GNAHotelSolutions\Flasher\Message;
 
 class FlasherTest extends TestCase
 {
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_find_notification_by_id()
     {
         $id = Flasher::info('notification');
@@ -19,7 +22,10 @@ class FlasherTest extends TestCase
         $this->assertInstanceOf(Message::class, $message);
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_get_all_notifications_as_array()
     {
         Flasher::success('ok');
@@ -30,7 +36,10 @@ class FlasherTest extends TestCase
         $this->assertCount(2, Flasher::all());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_get_the_first_notification()
     {
         Flasher::success('ok');
@@ -40,13 +49,19 @@ class FlasherTest extends TestCase
         $this->assertSame('ok', Flasher::first()->getMessage());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function first_notification_returns_null_if_there_is_no_notification()
     {
         $this->assertNull(Flasher::first());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_add_a_success_notification()
     {
         $this->assertEmpty(session('notifications'));
@@ -64,7 +79,10 @@ class FlasherTest extends TestCase
         $this->assertSame('success', $notification->getType());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_add_a_error_notification()
     {
         $this->assertEmpty(session('notifications'));
@@ -82,7 +100,10 @@ class FlasherTest extends TestCase
         $this->assertSame('error', $notification->getType());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_add_a_info_notification()
     {
         $this->assertEmpty(session('notifications'));
@@ -100,7 +121,10 @@ class FlasherTest extends TestCase
         $this->assertSame('info', $notification->getType());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_add_a_warning_notification()
     {
         $this->assertEmpty(session('notifications'));
@@ -118,7 +142,10 @@ class FlasherTest extends TestCase
         $this->assertSame('warning', $notification->getType());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function can_check_if_session_has_notifications()
     {
         Flasher::warning('A notification about nothing');
